@@ -10,7 +10,7 @@ It would be nice if data analysis could solve our state’s addiction crisis, bu
 For this project, we worked in RStudio, an open-source integrated development environment. A lot of our inspiration both for this project, and for certain sections of the final implementation of our code, came from Alan Pryor Jr.’s Kaggle notebook, “Analyzing Opiate Prescriptions in the U.S. - How Could We Save Lives Using Predictive Modeling?”. Before we could begin building our model, the CMS data needed to be checked for errors and standardized. We took the detailed address data given to us in the CMS data and used it to create a slightly more useful ‘County’ feature. Because the observations in the CMS files had lots of levels, we decided to create dummy variables for each level in order to use the type of model we were interested in. We also decided not to truncate the drugs we would train our model on, as there were only a little more than 1200 unique drug names present, and it wasn’t overly resource intensive to simply keep all of the observations. We used a Gradient Boosted Classification Tree ensemble with gbm and caret to build our model. With so many features in play, the likelihood that some of them were highly correlated made this a good choice for a model. Because trees take a while to train, we kept the default parameters of the package we were using to minimize resources and time consumed. We used 5-fold cross validation to optimize the hyperparameters for our boosted tree ensemble.
 ## Results
 ![Feature Importance Map](mapnobg.png)
-![Feature Importance Graph](Feature Importance.png)
+![Feature Importance Graph](Feature%20Importance.png)
 Accuracy: 0.8341
 Sensitivity : 0.8297
 Specificity : 0.839
